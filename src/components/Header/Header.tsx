@@ -47,105 +47,139 @@ export default function Header() {
 
     const renderNavItems = (isModal: boolean) => (
         <ul className={`md:flex gap-8 items-center font-semibold w-full ${isModal ? 'flex-col text-center' : ''}`}>
-            <li className="relative nav-item">
-                <Link href={'/'}><button
-                    className="focus:outline-none flex items-center"
-                    onMouseEnter={() => !isModal && handleMouseEnter(1)}
-                    onMouseLeave={() => !isModal && handleMouseLeave()}
-                >
-                    Home {isModal ? null : <FaChevronDown className="ml-1 text-xs text-red-500" />}
-                </button></Link>
-                {/* 
-                {dropdownOpen === 1 && !isModal && (
-                    <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 z-20"
-                        onMouseEnter={() => handleMouseEnter(1)}
-                        onMouseLeave={handleMouseLeave}>
-                        <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Home Page 1</a></li>
-                        <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Home Page 2</a></li>
-                        <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Home Page 3</a></li>
-                    </ul>
-                )} */}
-            </li>
-            <li className="nav-item"><a href="about" className="">About Us</a></li>
-            <li className="relative nav-item">
-                <button
-                    className=" focus:outline-none flex items-center"
-                    onMouseEnter={() => !isModal && handleMouseEnter(2)}
-                    onMouseLeave={() => !isModal && handleMouseLeave}
-                >
-                    Services {isModal ? null : <FaChevronDown className="ml-1 text-xs text-red-500" />}
-                </button>
-                {dropdownOpen === 2 && !isModal && (
-                    <ul className="absolute left-0 mt-2 w-60 bg-white border border-gray-300 z-20"
-                        onMouseEnter={() => handleMouseEnter(2)}
-                        onMouseLeave={handleMouseLeave}>
-                        <Link href="/services/nickel" className="p-2 hover:bg-red-500 hover:text-white">Nickel Metal (Cathode)</Link>
-                        <Link href="/services" className="p-2 hover:bg-red-500 hover:text-white">Nickel Metal (Cathode)</Link>
-                        <Link href="/services" className="p-2 hover:bg-red-500 hover:text-white">Nickel Metal (Cathode)</Link>
-                        <Link href="/services" className="p-2 hover:bg-red-500 hover:text-white">Nickel Metal (Cathode)</Link>
-                        <Link href="/services" className="p-2 hover:bg-red-500 hover:text-white">Nickel Metal (Cathode)</Link>
-                        <Link href="/services" className="p-2 hover:bg-red-500 hover:text-white">Nickel Metal (Cathode)</Link>
-                        <Link href="/services" className="p-2 hover:bg-red-500 hover:text-white">Nickel Metal (Cathode)</Link>
-                        <Link href="/services" className="p-2 hover:bg-red-500 hover:text-white">Nickel Metal (Cathode)</Link>
-                    </ul>
-                )}
-            </li>
-            <li className="relative nav-item">
-                <button
-                    className=" focus:outline-none flex items-center"
-                    onMouseEnter={() => !isModal && handleMouseEnter(3)}
-                    onMouseLeave={() => !isModal && handleMouseLeave}
-                >
-                    Shop {isModal ? null : <FaChevronDown className="ml-1 text-xs text-red-500" />}
-                </button>
-                {dropdownOpen === 3 && !isModal && (
-                    <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 z-20"
-                        onMouseEnter={() => handleMouseEnter(3)}
-                        onMouseLeave={handleMouseLeave}>
-                        <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Shop 1</a></li>
-                        <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Shop 2</a></li>
-                        <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Shop 3</a></li>
-                    </ul>
-                )}
-            </li>
-            <li className="relative nav-item">
-                <button
-                    className=" focus:outline-none flex items-center"
-                    onMouseEnter={() => !isModal && handleMouseEnter(4)}
-                    onMouseLeave={() => !isModal && handleMouseLeave}
-                >
-                    Pages {isModal ? null : <FaChevronDown className="ml-1 text-xs text-red-500" />}
-                </button>
-                {dropdownOpen === 4 && !isModal && (
-                    <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 z-20"
-                        onMouseEnter={() => handleMouseEnter(4)}
-                        onMouseLeave={handleMouseLeave}>
-                        <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Page 1</a></li>
-                        <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Page 2</a></li>
-                        <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Page 3</a></li>
-                    </ul>
-                )}
-            </li>
-            <li className="relative nav-item">
-                <Link href={'/blogpage'}>   <button
-                    className=" focus:outline-none flex items-center"
-                    onMouseEnter={() => !isModal && handleMouseEnter(5)}
-                    onMouseLeave={() => !isModal && handleMouseLeave}
-                >
-                    Blog {isModal ? null : <FaChevronDown className="ml-1 text-xs text-red-500" />}
-                </button></Link>
-                {/* {dropdownOpen === 5 && !isModal && (
-                    <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 z-20"
-                        onMouseEnter={() => handleMouseEnter(5)}
-                        onMouseLeave={handleMouseLeave}>
-                        <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Blog 1</a></li>
-                        <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Blog 2</a></li>
-                        <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Blog 3</a></li>
-                    </ul>
-                )} */}
-            </li>
-            <li className="nav-item"><a href="#" className="">Contact Us</a></li>
-        </ul>
+        <li className="relative nav-item">
+            <Link href={'/'}><button
+                className="focus:outline-none flex items-center"
+                onMouseEnter={() => !isModal && handleMouseEnter(1)}
+                onMouseLeave={() => !isModal && handleMouseLeave()}
+            >
+                Home
+            </button></Link>
+            {/*
+            {dropdownOpen === 1 && !isModal && (
+                <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 z-20"
+                    onMouseEnter={() => handleMouseEnter(1)}
+                    onMouseLeave={handleMouseLeave}>
+                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Home Page 1</a></li>
+                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Home Page 2</a></li>
+                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Home Page 3</a></li>
+                </ul>
+            )} */}
+        </li>
+        <li className="nav-item"><a href="about" className="">About Us</a></li>
+        <li className="relative nav-item">
+  <button
+    className="focus:outline-none flex items-center"
+    onMouseEnter={() => !isModal && handleMouseEnter(2)}
+    onMouseLeave={() => !isModal && handleMouseLeave()}
+  >
+    Services {isModal ? null : <FaChevronDown className="ml-1 text-xs text-red-500" />}
+  </button>
+  {dropdownOpen === 2 && !isModal && (
+    <ul
+      className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 z-20"
+      onMouseEnter={() => handleMouseEnter(2)}
+      onMouseLeave={handleMouseLeave}
+    >
+      <li className="p-2 hover:bg-red-500 hover:text-white">
+        <Link href="/services/nickel">
+          Nickel Metal (Cathode)
+        </Link>
+      </li>
+      <li className="p-2 hover:bg-red-500 hover:text-white">
+        <Link href="/services/nickelsulphatehexahydrate">
+          Nickel Sulphate Hexahydrate
+        </Link>
+      </li>
+      <li className="p-2 hover:bg-red-500 hover:text-white">
+        <Link href="/services/nickelsulphatesolution">
+          Nickel Sulphate Solution
+        </Link>
+      </li>
+      <li className="p-2 hover:bg-red-500 hover:text-white">
+        <Link href="/services/cobaltsulphatecrystals">
+          Cobalt Sulphate Crystals
+        </Link>
+      </li>
+      <li className="p-2 hover:bg-red-500 hover:text-white">
+        <Link href="/services/cobaltsulphatesolution">
+          Cobalt Sulphate Solutions
+        </Link>
+      </li>
+      <li className="p-2 hover:bg-red-500 hover:text-white">
+        <Link href="/services/manganesesulphatesolutions">
+          Manganese Sulphate Solutions
+        </Link>
+      </li>
+      <li className="p-2 hover:bg-red-500 hover:text-white">
+        <Link href="/services/manganesesulphatecrystals">
+          Manganese Sulphate Crystals
+        </Link>
+      </li>
+      <li className="p-2 hover:bg-red-500 hover:text-white">
+        <Link href="/services/sodiumsulphateanhydrous">
+          Sodium Sulphate Anhydrous
+        </Link>
+      </li>
+    </ul>
+  )}
+</li>
+        <li className="relative nav-item">
+            <button
+                className=" focus:outline-none flex items-center"
+                onMouseEnter={() => !isModal && handleMouseEnter(3)}
+                onMouseLeave={() => !isModal && handleMouseLeave}
+            >
+                Shop {isModal ? null : <FaChevronDown className="ml-1 text-xs text-red-500" />}
+            </button>
+            {dropdownOpen === 3 && !isModal && (
+                <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 z-20"
+                    onMouseEnter={() => handleMouseEnter(3)}
+                    onMouseLeave={handleMouseLeave}>
+                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Shop 1</a></li>
+                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Shop 2</a></li>
+                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Shop 3</a></li>
+                </ul>
+            )}
+        </li>
+        <li className="relative nav-item">
+            <button
+                className=" focus:outline-none flex items-center"
+                onMouseEnter={() => !isModal && handleMouseEnter(4)}
+                onMouseLeave={() => !isModal && handleMouseLeave}
+            >
+                Pages {isModal ? null : <FaChevronDown className="ml-1 text-xs text-red-500" />}
+            </button>
+            {dropdownOpen === 4 && !isModal && (
+                <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 z-20"
+                    onMouseEnter={() => handleMouseEnter(4)}
+                    onMouseLeave={handleMouseLeave}>
+                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Page 1</a></li>
+                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Page 2</a></li>
+                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Page 3</a></li>
+                </ul>
+            )}
+        </li>
+        <li className="relative nav-item">
+            <Link href={'/blogpage'}>   <button
+                className=" focus:outline-none flex items-center"
+                onMouseEnter={() => !isModal && handleMouseEnter(5)}
+                onMouseLeave={() => !isModal && handleMouseLeave}
+            >
+                Blog {isModal ? null : <FaChevronDown className="ml-1 text-xs text-red-500" />}
+            </button></Link>
+            {/* {dropdownOpen === 5 && !isModal && (
+                <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 z-20"
+                    onMouseEnter={() => handleMouseEnter(5)}
+                    onMouseLeave={handleMouseLeave}>
+                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Blog 1</a></li>
+                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Blog 2</a></li>
+                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Blog 3</a></li>
+                </ul>
+            )} */}
+        </li>
+        <li className="nav-item"><a href="#" className="">Contact Us</a></li>
+    </ul>
     );
 
     return (
