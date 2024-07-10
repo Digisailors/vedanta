@@ -158,22 +158,22 @@ export default function Component() {
           <div className="md:flex">
             <div className="text-left">
               <h1 className="text-4xl font-bold">
-                Welcome to <span className="text-[#f97316]">Industrio Company</span>
+                Welcome to <span className="text-[#74b42c]">Industrio Company</span>
               </h1>
               <p className="mt-4 text-lg text-gray-700">
                 Manufacturing industry became a key sector of production and labour in European and North American countries during the Industrial Revolution, upsetting previous mercantile and feudal economies.
               </p>
               <div className="mt-4 space-y-2 text-left md:space-y-0 md:space-x-8 md:flex md:justify-start">
                 <div>
-                  <p className="text-[#f97316]">→ Our Work Growth</p>
-                  <p className="text-[#f97316]">→ 1500 Employed</p>
+                  <p className="text-[#045494]">→ Our Work Growth</p>
+                  <p className="text-[#045494]">→ 1500 Employed</p>
                 </div>
                 <div>
-                  <p className="text-[#f97316]">→ Our Employee Growth</p>
-                  <p className="text-[#f97316]">→ Service Management</p>
+                  <p className="text-[#045494]">→ Our Employee Growth</p>
+                  <p className="text-[#045494]">→ Service Management</p>
                 </div>
               </div>
-              <Button className="mt-8 bg-[#f97316] text-white">Learn about the services</Button>
+              <Button className="mt-8 bg-[#74b42c] text-white">Learn about the services</Button>
             </div>
             <div className="mt-16 flex justify-center">
               <div className="relative w-72 h-72">
