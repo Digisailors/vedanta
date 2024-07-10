@@ -85,7 +85,7 @@
 }
 
 .nav-item:hover button {
-    color: red; /* Example color change on hover */
+    color: rgb(0, 223, 4); /* Example color change on hover */
 }
 
 .nav-item ul {
@@ -116,7 +116,7 @@
 }
 
 .nav-item ul li:hover {
-    background-color: #f25151; /* Example background color change on hover */
+    background-color: #008000; /* Example background color change on hover */
 }
 .fixed {
   position: fixed;

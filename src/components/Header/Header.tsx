@@ -73,7 +73,7 @@ export default function Header() {
     onMouseEnter={() => !isModal && handleMouseEnter(2)}
     onMouseLeave={() => !isModal && handleMouseLeave()}
   >
-    Services {isModal ? null : <FaChevronDown className="ml-1 text-xs text-red-500" />}
+    Services {isModal ? null : <FaChevronDown className="ml-1 text-xs text-blue-500" />}
   </button>
   {dropdownOpen === 2 && !isModal && (
     <ul
@@ -81,42 +81,42 @@ export default function Header() {
       onMouseEnter={() => handleMouseEnter(2)}
       onMouseLeave={handleMouseLeave}
     >
-      <li className="p-2 hover:bg-red-500 hover:text-white">
+      <li className="p-2 hover:bg-green-500 hover:text-white">
         <Link href="/services/nickel">
           Nickel Metal (Cathode)
         </Link>
       </li>
-      <li className="p-2 hover:bg-red-500 hover:text-white">
+      <li className="p-2 hover:bg-green-500 hover:text-white">
         <Link href="/services/nickelsulphatehexahydrate">
           Nickel Sulphate Hexahydrate
         </Link>
       </li>
-      <li className="p-2 hover:bg-red-500 hover:text-white">
+      <li className="p-2 hover:bg-green-500 hover:text-white">
         <Link href="/services/nickelsulphatesolution">
           Nickel Sulphate Solution
         </Link>
       </li>
-      <li className="p-2 hover:bg-red-500 hover:text-white">
+      <li className="p-2 hover:bg-green-500 hover:text-white">
         <Link href="/services/cobaltsulphatecrystals">
           Cobalt Sulphate Crystals
         </Link>
       </li>
-      <li className="p-2 hover:bg-red-500 hover:text-white">
+      <li className="p-2 hover:bg-green-500 hover:text-white">
         <Link href="/services/cobaltsulphatesolution">
           Cobalt Sulphate Solutions
         </Link>
       </li>
-      <li className="p-2 hover:bg-red-500 hover:text-white">
+      <li className="p-2 hover:bg-green-500 hover:text-white">
         <Link href="/services/manganesesulphatesolutions">
           Manganese Sulphate Solutions
         </Link>
       </li>
-      <li className="p-2 hover:bg-red-500 hover:text-white">
+      <li className="p-2 hover:bg-green-500 hover:text-white">
         <Link href="/services/manganesesulphatecrystals">
           Manganese Sulphate Crystals
         </Link>
       </li>
-      <li className="p-2 hover:bg-red-500 hover:text-white">
+      <li className="p-2 hover:bg-green-500 hover:text-white">
         <Link href="/services/sodiumsulphateanhydrous">
           Sodium Sulphate Anhydrous
         </Link>
@@ -130,15 +130,15 @@ export default function Header() {
                 onMouseEnter={() => !isModal && handleMouseEnter(3)}
                 onMouseLeave={() => !isModal && handleMouseLeave}
             >
-                Shop {isModal ? null : <FaChevronDown className="ml-1 text-xs text-red-500" />}
+                Shop {isModal ? null : <FaChevronDown className="ml-1 text-xs text-blue-500" />}
             </button>
             {dropdownOpen === 3 && !isModal && (
                 <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 z-20"
                     onMouseEnter={() => handleMouseEnter(3)}
                     onMouseLeave={handleMouseLeave}>
-                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Shop 1</a></li>
-                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Shop 2</a></li>
-                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Shop 3</a></li>
+                    <li className="p-2 hover:bg-green-500 hover:text-white"><a href="#" className="">Shop 1</a></li>
+                    <li className="p-2 hover:bg-green-500 hover:text-white"><a href="#" className="">Shop 2</a></li>
+                    <li className="p-2 hover:bg-green-500 hover:text-white"><a href="#" className="">Shop 3</a></li>
                 </ul>
             )}
         </li>
@@ -148,15 +148,15 @@ export default function Header() {
                 onMouseEnter={() => !isModal && handleMouseEnter(4)}
                 onMouseLeave={() => !isModal && handleMouseLeave}
             >
-                Pages {isModal ? null : <FaChevronDown className="ml-1 text-xs text-red-500" />}
+                Pages {isModal ? null : <FaChevronDown className="ml-1 text-xs text-blue-500" />}
             </button>
             {dropdownOpen === 4 && !isModal && (
                 <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 z-20"
                     onMouseEnter={() => handleMouseEnter(4)}
                     onMouseLeave={handleMouseLeave}>
-                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Page 1</a></li>
-                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Page 2</a></li>
-                    <li className="p-2 hover:bg-red-500 hover:text-white"><a href="#" className="">Page 3</a></li>
+                    <li className="p-2 hover:bg-blue-500 hover:text-white"><a href="#" className="">Page 1</a></li>
+                    <li className="p-2 hover:bg-blue-500 hover:text-white"><a href="#" className="">Page 2</a></li>
+                    <li className="p-2 hover:bg-blue-500 hover:text-white"><a href="#" className="">Page 3</a></li>
                 </ul>
             )}
         </li>
@@ -166,7 +166,7 @@ export default function Header() {
                 onMouseEnter={() => !isModal && handleMouseEnter(5)}
                 onMouseLeave={() => !isModal && handleMouseLeave}
             >
-                Blog {isModal ? null : <FaChevronDown className="ml-1 text-xs text-red-500" />}
+                Blog {isModal ? null : <FaChevronDown className="ml-1 text-xs text-blue-500" />}
             </button></Link>
             {/* {dropdownOpen === 5 && !isModal && (
                 <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 z-20"
@@ -240,7 +240,7 @@ export default function Header() {
                     <TextReader />
                     </div>
                     <div
-                        className="relative ml-6 mr-4 bg-red-600 px-16 text-white h-full flex items-center hover:bg-gray-800 cursor-pointer"
+                        className="relative ml-6 mr-4 bg-green-600 px-16 text-white h-full flex items-center hover:bg-blue-700 cursor-pointer"
                         style={{
                             transform: 'skewX(-12deg)',
                             transformOrigin: 'right',
@@ -248,7 +248,7 @@ export default function Header() {
                             letterSpacing: '0.01em',
                             lineHeight: '1em',
                             position: 'relative',
-                            background: '#fe5a0e',
+                            background: '',
                             color: '#ffffff',
                             fontSize: '16px',
                             fontFamily: 'Poppins',
