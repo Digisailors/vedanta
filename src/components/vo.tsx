@@ -10,6 +10,7 @@ import { BsFillFuelPumpFill } from "react-icons/bs";
 import TitleSection from "./Titlesection";
 
 
+
 // Replace with actual icons you need
 
 export default function Component() {
@@ -138,16 +139,24 @@ export default function Component() {
 
   const titles = [
     {
-      title: 'Title 1', images: ['https://img.etimg.com/thumb/width-420,height-315,imgsize-132246,resizemode-75,msid-47096231/industry/energy/oil-gas/vedanta-reports-3-bn-goodwill-impairment-charges-related-to-oil-gas-biz-biggest-in-indias-corporate-history.jpg',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1eSFbZUSzDoP2Qo_PeWUVmwwA-TFJ16Q3VQ&s', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1eSFbZUSzDoP2Qo_PeWUVmwwA-TFJ16Q3VQ&s', 'https://img.etimg.com/thumb/width-420,height-315,imgsize-132246,resizemode-75,msid-47096231/industry/energy/oil-gas/vedanta-reports-3-bn-goodwill-impairment-charges-related-to-oil-gas-biz-biggest-in-indias-corporate-history.jpg', 'https://img.etimg.com/thumb/width-420,height-315,imgsize-132246,resizemode-75,msid-47096231/industry/energy/oil-gas/vedanta-reports-3-bn-goodwill-impairment-charges-related-to-oil-gas-biz-biggest-in-indias-corporate-history.jpg',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1eSFbZUSzDoP2Qo_PeWUVmwwA-TFJ16Q3VQ&s', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1eSFbZUSzDoP2Qo_PeWUVmwwA-TFJ16Q3VQ&s', 'https://img.etimg.com/thumb/width-420,height-315,imgsize-132246,resizemode-75,msid-47096231/industry/energy/oil-gas/vedanta-reports-3-bn-goodwill-impairment-charges-related-to-oil-gas-biz-biggest-in-indias-corporate-history.jpg']
+      title: 'Aluminium', 
+      images: [
+        '/images/img1.png',
+        '/images/img2.png',
+        '/images/img3.png',
+        '/images/img4.png',
+        '/images/img5.png',
+        '/images/img6.png',
+        '/images/img7.png',
+        '/images/img8.png'
+      ]
     },
-    { title: 'Title 2', images: ['https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp', 'https://www.thestatesman.com/wp-content/uploads/2021/07/water-cannonnew.jpg', '/image7.jpg', 'https://s7ap1.scene7.com/is/image/TCSCOMprod/vedanta-automates-operations-from-pit-to-port?wid=1100&hei=581&dpr=off'] },
-    { title: 'Title 3', images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1eSFbZUSzDoP2Qo_PeWUVmwwA-TFJ16Q3VQ&s', '/image10.jpg', '/image11.jpg', '/image12.jpg'] },
-    { title: 'Title 4', images: ['/image13.jpg', '/image14.jpg', '/image15.jpg', 'https://telugustop.com/wp-content/uploads/2022/02/vedanta-aluminium-fly-ash.jpg'] },
-    { title: 'Title 5', images: ['/image17.jpg', '/image18.jpg', '/image19.jpg', '/image20.jpg'] },
-    { title: 'Title 6', images: ['/image21.jpg', 'https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp', '/image23.jpg', '/image24.jpg'] },
-    { title: 'Title 7', images: ['/image25.jpg', '/image26.jpg', '/image27.jpg', 'https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp'] },
+    { title: 'Zinc, Lead & Silver', images: ['https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp', 'https://www.thestatesman.com/wp-content/uploads/2021/07/water-cannonnew.jpg', '/image7.jpg', 'https://s7ap1.scene7.com/is/image/TCSCOMprod/vedanta-automates-operations-from-pit-to-port?wid=1100&hei=581&dpr=off'] },
+    { title: 'Iron Ore', images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1eSFbZUSzDoP2Qo_PeWUVmwwA-TFJ16Q3VQ&s', '/image10.jpg', '/image11.jpg', '/image12.jpg'] },
+    { title: 'Oil & Gas', images: ['/image13.jpg', '/image14.jpg', '/image15.jpg', 'https://telugustop.com/wp-content/uploads/2022/02/vedanta-aluminium-fly-ash.jpg'] },
+    { title: 'Nickel', images: ['/image17.jpg', '/image18.jpg', '/image19.jpg', '/image20.jpg'] },
+    { title: 'Sulphate', images: ['/image21.jpg', 'https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp', '/image23.jpg', '/image24.jpg'] },
+    { title: 'Copper', images: ['/image25.jpg', '/image26.jpg', '/image27.jpg', 'https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp'] },
   ];
   const selectedImages = titles[selectedTitle].images;
 
@@ -155,8 +164,8 @@ export default function Component() {
     <>
       <div className="min-h-screen bg-white mt-28">
         <main className="px-4 py-16 text-center md:px-8 lg:px-16">
-          <div className="md:flex">
-            <div className="text-left">
+          <div className="md:flex w-full">
+            <div className="text-left w-[60%]">
               <h1 className="text-4xl font-bold">
                 Welcome to <span className="text-[#74b42c]">Industrio Company</span>
               </h1>
@@ -176,15 +185,15 @@ export default function Component() {
               <Button className="mt-8 bg-[#74b42c] text-white">Learn about the services</Button>
             </div>
             <div className="mt-16 flex justify-center">
-              <div className="relative w-72 h-72">
+              <div className="relative  h-[25rem] w-[25rem] rounded-full ">
                 <Image
                   src={images[0]}
                   alt={images[0]}
-                  width={288}
-                  height={288}
-                  className="rounded-full w-full h-full object-cover"
+                  width={500}
+                  height={500}
+                  className="rounded-full w-auto h-96  object-cover"
                 />
-                <div className="absolute bottom-0 right-0 w-36 h-36">
+                <div className="absolute bottom-0 -right-24 w-64 h-64">
                   <video
                     src={videos[0]}
                     className="rounded-full w-full h-full object-cover"
@@ -196,7 +205,7 @@ export default function Component() {
                     onClick={() => setIsModalOpen(true)}
                   >
                     <svg
-                      className="w-8 h-8 text-red-600"
+                      className="w-8 h-8 text-white"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
@@ -223,7 +232,7 @@ export default function Component() {
                         <div className="relative z-10 h-full flex flex-col justify-center items-center p-8 text-center">
                           {/* Default content */}
                           <div className="default-content group-hover:hidden">
-                            <div className="text-4xl text-orange-600 mb-4 transition-colors duration-300 flex justify-center">
+                            <div className="text-4xl text-blue-500 mb-4 transition-colors duration-300 flex justify-center">
                               {React.createElement(feature.icon, { className: "h-10 w-10 flex justify-center" })}
                             </div>
                             <h3 className="text-xl font-bold mb-4 transition-colors duration-300">
@@ -300,7 +309,7 @@ export default function Component() {
         )}
       </div>
       <div>
-        <h1 className="text-4xl text-center">Projects for <span className="text-orange-500">inspirations</span></h1>
+        <h1 className="text-4xl text-center">Projects for <span className="text-green-500">inspirations</span></h1>
         <div className="flex justify-center w-full my-5">
           <h1 className="text-xl text-center w-2/4">You will find yourself working in a true partnership that results in an incredible
             experience, and an end product that is the best.</h1>
@@ -321,7 +330,7 @@ export default function Component() {
           <div className="flex justify-center">
           <div className="images w-[90%] grid grid-cols-4 gap-4 mt-10">
               {selectedImages.map((src, index) => (
-                <div key={index} className="image-container">
+                <div key={index} className="image-container flex justify-center items-center">
                   <Image
                     width={300}
                     height={300}

@@ -234,11 +234,11 @@ export default function Header() {
 
                     <div className="flex-1 hidden md:flex gap-2 justify-center bg-white h-full px-5 items-center ">
                         {renderNavItems(false)}
-                        
-                    </div>
-                    <div className=' ml-2'>
+                          <div className=' ml-2'>
                     <TextReader />
                     </div>
+                    </div>
+                  
                     <div
                         className="relative ml-6 mr-4 bg-green-600 px-16 text-white h-full flex items-center hover:bg-blue-700 cursor-pointer"
                         style={{
