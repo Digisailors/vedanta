@@ -106,7 +106,7 @@ const Card: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="px-2">
                 <div className="relative w-full h-64 overflow-hidden border transition duration-300 hover:shadow-xl group">
-                  <div className="absolute inset-0 bg-[#0063A8] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                  <div className="absolute inset-0 bg-[#75bef2] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                   <div className="relative z-10 h-full flex flex-col justify-center items-center p-8 text-center">
                     <div className="text-4xl text-blue-600 mb-4 group-hover:text-[#66CC33] transition-colors duration-300">
                       {/* Add an icon or other element here if needed */}

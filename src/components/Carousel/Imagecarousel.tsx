@@ -4,14 +4,15 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import Cardcarousel from "./Cardcarousel";
+import Image from 'next/image';
 
 export function ImagesSliderDemo() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
-    'https://images.pexels.com/photos/236722/pexels-photo-236722.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/3105242/pexels-photo-3105242.jpeg?auto=compress&cs=tinysrgb&w=800',
-    'https://images.pexels.com/photos/1057858/pexels-photo-1057858.jpeg?auto=compress&cs=tinysrgb&w=800',
+    './images/image1.jpg',
+    './images/image2.png',
+    './images/image3.jpeg',
   ];
 
   useEffect(() => {
