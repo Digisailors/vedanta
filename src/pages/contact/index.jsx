@@ -10,7 +10,7 @@ import { BsPersonWorkspace } from "react-icons/bs";
 import Link from "next/link";
 import Header from "@/components/Header/Header";
 
-const About = () => {
+const contact = () => {
   const [selectedYear, setSelectedYear] = useState(2010);
   const [activeSection, setActiveSection] = useState(0);
 
@@ -78,7 +78,7 @@ const About = () => {
   }}
 >
   <div className="container mx-auto px-4 text-center">
-    <h3 className="text-4xl font-bold mb-4">About Us</h3>
+    <h3 className="text-4xl font-bold mb-4">Contact Us</h3>
     <ul className="flex justify-center">
       <li>
         <Link href="/" className="text-[#0063A8]">
@@ -89,7 +89,7 @@ const About = () => {
         <span className="mx-2">&gt;</span>
       </li>
       <li>
-        <span>About Us</span>
+        <span>Contact Us</span>
       </li>
     </ul>
   </div>
@@ -418,4 +418,5 @@ Vedanta Limited is listed on the Bombay Stock Exchange and the National Stock Ex
   );
 };
 
-export default About;
+export default contact;
+

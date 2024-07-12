@@ -92,11 +92,11 @@ const Blogcontent = () => {
         ></Image>
       <div className="absolute top-20">
 <div className="text-5xl mb-4">
-  <h1 className="text-orange-600">Blog Listing</h1>
+  <h1 className="text-green-600">Blog Listing</h1>
 </div>
 <hr/>
 <div className="text-2xl flex gap-2">
-  <h1 className="text-orange-600">Home<span className="text-white">&gt;</span> </h1> <h1 className="">Blog Listing</h1>
+  <h1 className="text-sky-600">Home<span className="text-white">&gt;</span> </h1> <h1 className="">Blog Listing</h1>
 </div>
       </div>
       </div>
