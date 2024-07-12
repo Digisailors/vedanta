@@ -20,10 +20,10 @@ const TitleSection: React.FC<TitleSectionProps> = ({ title, isSelected, onClick 
           cursor: pointer;
         }
         .title-section:hover {
-          border-color: orange;
+          border-color: blue;
         }
         .title-section.selected {
-          border-color: orange;
+          border-color: green;
         }
       `}</style>
     </div>

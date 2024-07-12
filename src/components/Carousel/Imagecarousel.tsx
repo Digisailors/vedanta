@@ -73,7 +73,7 @@ export function ImagesSliderDemo() {
   We will provide the <br />
   <span className="relative inline-block">
     best&nbsp;
-    <span className="font-bodoni text-transparent bg-gradient-to-r from-blue-700 to-green-500 bg-clip-text italic ">
+    <span className="font-bodoni text-transparent bg-gradient-to-r from-blue-700 to-green-600 bg-clip-text italic ">
       Industrial
     </span>
   </span>
@@ -88,7 +88,7 @@ export function ImagesSliderDemo() {
                   className={`mt-4 ${currentIndex % 3 === 1 ? 'justify-center' : currentIndex % 3 === 2 ? 'justify-end' : ''} flex`}
                 >
                   <motion.button 
-                    className="bg-green-600 hover:bg-blue-700 text-white px-4 py-2 flex items-center space-x-2 rounded"
+                    className="bg-green-600 hover:bg-blue-800 text-white px-4 py-2 flex items-center space-x-2 rounded"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >

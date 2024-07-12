@@ -178,7 +178,7 @@ export default function Header() {
                 </ul>
             )} */}
         </li>
-        <li className="nav-item"><a href="#" className="">Contact Us</a></li>
+        <li className="nav-item"><a href="/contact" className="">Contact Us</a></li>
     </ul>
     );
 
@@ -196,11 +196,11 @@ export default function Header() {
                         ></Image>
                     </div>
 
-                    <div className="bg-slate-800 md:flex px-4 pt-6 justify-around w-full" style={{ clipPath: 'polygon(8% 0, 100% 0%, 100% 100%, 0% 100%)' }}>
+                    <div className="bg-gray-800 md:flex px-4 pt-6 justify-around w-full" style={{ clipPath: 'polygon(8% 0, 100% 0%, 100% 100%, 0% 100%)' }}>
                         <div className="flex mt-2">
                             <FaPhoneAlt size={20} className='text-white m-2' />
                             <div>
-                                <p className="text-red-600">Call us 9:00am - 6:00pm</p>
+                                <p className="text-blue-500">Call us 9:00am - 6:00pm</p>
                                 <p className='text-white'>222-111-2254</p>
                             </div>
                         </div>
@@ -208,7 +208,7 @@ export default function Header() {
                         <div className="flex mt-2">
                             <FaClock size={20} className='text-white m-2' />
                             <div>
-                                <p className="text-red-600">Monday to Friday</p>
+                                <p className="text-white">Monday to Friday</p>
                                 <p className='text-white'>9:00am - 6:00pm</p>
                             </div>
                         </div>
@@ -216,7 +216,7 @@ export default function Header() {
                         <div className="flex mt-2">
                             <FaEnvelope size={20} className='text-white m-2' />
                             <div>
-                                <p className="text-red-600">E-mail us</p>
+                                <p className="text-white">E-mail us</p>
                                 <p className='text-white'>support@gmail.com</p>
                             </div>
                         </div>
@@ -240,7 +240,7 @@ export default function Header() {
                     </div>
                   
                     <div
-                        className="relative ml-6 mr-4 bg-green-600 px-16 text-white h-full flex items-center hover:bg-blue-700 cursor-pointer"
+                        className="relative ml-6 mr-4 bg-green-500 px-16 text-white h-full flex items-center hover:bg-blue-900 cursor-pointer"
                         style={{
                             transform: 'skewX(-12deg)',
                             transformOrigin: 'right',

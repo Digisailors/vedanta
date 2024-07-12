@@ -309,7 +309,7 @@ export default function Component() {
         )}
       </div>
       <div>
-        <h1 className="text-4xl text-center">Projects for <span className="text-green-500">inspirations</span></h1>
+        <h1 className="text-4xl text-center">Projects for <span className="text-[#74b42c]">inspirations</span></h1>
         <div className="flex justify-center w-full my-5">
           <h1 className="text-xl text-center w-2/4">You will find yourself working in a true partnership that results in an incredible
             experience, and an end product that is the best.</h1>
