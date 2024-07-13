@@ -16,6 +16,7 @@ import { MdOutlineAccessTime } from "react-icons/md";
 import { CiMail } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Header from "@/components/Header/Header";
+import { useRouter} from "next/navigation"
 import {
   Accordion,
   AccordionContent,
@@ -23,6 +24,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 const Blogcontent = () => {
+  const router = useRouter();
   const contentData = [
     {
       image: "https://via.placeholder.com/150",
@@ -113,6 +115,7 @@ const Blogcontent = () => {
                 <h2 className="text-xl font-bold mt-4">{content.title}</h2>
                 <h3 className="text-lg text-gray-600">{content.subtitle}</h3>
                 <p className="text-gray-700 mt-2">{content.paragraph}</p>
+                <div className="mt-2 w-44 h-14 bg-black font-bold text-white flex justify-center items-center hover:bg-orange-600 cursor-pointer" onClick={() => router.push('/blogview', { scroll: false })}>Continue Reading</div>
               </div>
             </div>
           ))}
