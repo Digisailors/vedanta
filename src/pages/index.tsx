@@ -12,13 +12,14 @@ import Company from "@/components/vo";
 import { ImagesSliderDemo } from "@/components/Carousel/Imagecarousel";
 
 const inter = Inter({ subsets: ["latin"] });
-
+//
 export default function Home() {
   return (
    <>
    <Header />
    <ImagesSliderDemo />
    {/* <Card/> */}
+  
    <Company/>
    <Footer />
    </>
