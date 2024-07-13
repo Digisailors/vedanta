@@ -1,6 +1,6 @@
-import Header from "@/components/Header/Header";
-import NickelMetalContent from "@/components/Maincontent/NickelMetalContent";
 import Footer from "@/components/footer/Footer";
+import Header from "@/components/Header/Header";
+import NickelSulphateHexahydrateContent from "@/components/Maincontent/NickelSulphateHexahydrateContent";
 import Link from "next/link";
 import React from "react";
 
@@ -33,7 +33,7 @@ const index = () => {
           </ul>
         </div>
       </div>
-      <NickelMetalContent />
+      <NickelSulphateHexahydrateContent />
       <Footer />
     </>
   );
