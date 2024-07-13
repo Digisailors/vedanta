@@ -10,7 +10,8 @@ const nextConfig = {
       "encrypted-tbn0.gstatic.com",
       "www.thestatesman.com",
       "s7ap1.scene7.com",
-      "telugustop.com"
+      "telugustop.com",
+      
     ],
   },
 };
