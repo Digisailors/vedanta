@@ -65,36 +65,35 @@ const About = () => {
   ];
   return (
     <div className="flex flex-col min-h-screen">
-      <Header/>
+      <Header />
       <main className="flex-grow">
         <div className="bg-white">
           {/* Inner Banner */}
           <div
-  className="py-16"
-  style={{
-    backgroundImage: "url('/images/img0.png')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-  <div className="container mx-auto px-4 text-center">
-    <h3 className="text-4xl font-bold mb-4">About Us</h3>
-    <ul className="flex justify-center">
-      <li>
-        <Link href="/" className="text-[#0063A8]">
-          Home
-        </Link>
-      </li>
-      <li>
-        <span className="mx-2">&gt;</span>
-      </li>
-      <li>
-        <span>About Us</span>
-      </li>
-    </ul>
-  </div>
-</div>
-
+            className="py-16"
+            style={{
+              backgroundImage: "url('/images/img0.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <div className="container mx-auto px-4 text-center">
+              <h3 className="text-4xl font-bold mb-4">About Us</h3>
+              <ul className="flex justify-center">
+                <li>
+                  <Link href="/" className="text-[#0063A8]">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <span className="mx-2">&gt;</span>
+                </li>
+                <li>
+                  <span>About Us</span>
+                </li>
+              </ul>
+            </div>
+          </div>
 
           {/* About Style Three */}
           <section className="py-16">
@@ -119,14 +118,25 @@ const About = () => {
                 <div className="w-full md:w-1/2 flex justify-center items-center">
                   <div className="pl-0 md:pl-8">
                     <h3 className="text-4xl font-bold mb-4 text-black">
-                    Building Blocks for a Sustainable Future
+                      Building Blocks for a Sustainable Future
                     </h3>
                     <p className="mb-12 text-black">
-                    Vedanta is a leading global natural resources and technology conglomerate operating across India, South Africa, Liberia, and Namibia. Our diversified interests span Oil & Gas, Zinc-Lead-Silver, Aluminium, Iron Ore, Steel, Copper, Ferro Alloys, Power, Nickel, Semiconductor, and Glass. Over the years, Vedanta has positioned itself as a leader in the natural resources sector, focusing on large-scale expansion with operational excellence benchmarked to global standards.
-
-For two decades, we have contributed to the Indian economy by generating thousands of jobs and significantly contributing to the national exchequer. We are committed to reducing carbon emissions to zero by 2050 or sooner, with a pledge of $5 billion over the next 10 years to accelerate this transition.
-
-Vedanta Limited is listed on the Bombay Stock Exchange and the National Stock Exchange.
+                      Vedanta is a leading global natural resources and
+                      technology conglomerate operating across India, South
+                      Africa, Liberia, and Namibia. Our diversified interests
+                      span Oil & Gas, Zinc-Lead-Silver, Aluminium, Iron Ore,
+                      Steel, Copper, Ferro Alloys, Power, Nickel, Semiconductor,
+                      and Glass. Over the years, Vedanta has positioned itself
+                      as a leader in the natural resources sector, focusing on
+                      large-scale expansion with operational excellence
+                      benchmarked to global standards. For two decades, we have
+                      contributed to the Indian economy by generating thousands
+                      of jobs and significantly contributing to the national
+                      exchequer. We are committed to reducing carbon emissions
+                      to zero by 2050 or sooner, with a pledge of $5 billion
+                      over the next 10 years to accelerate this transition.
+                      Vedanta Limited is listed on the Bombay Stock Exchange and
+                      the National Stock Exchange.
                     </p>
                     <a
                       href="#"
@@ -378,9 +388,7 @@ Vedanta Limited is listed on the Bombay Stock Exchange and the National Stock Ex
                 </button>
 
                 <div className="bg-gray-100 p-8 rounded-lg">
-                  <div className="text-4xl text-gray-300 absolute top-4 right-4">
-                    
-                  </div>
+                  <div className="text-4xl text-gray-300 absolute top-4 right-4"></div>
                   <h3 className="text-2xl font-bold mb-4">
                     {reviews[currentReview].title}
                   </h3>
