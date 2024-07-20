@@ -14,14 +14,17 @@ import Image from "next/image";
 import Link from "next/link";
 import TextReader from "../Textreader/Textreader";
 import { useRouter } from "next/navigation";
+import useMediaQuery from '../screensiz'; // Adjust the path accordingly
 
 export default function Header() {
+  const isMediumScreen = useMediaQuery(768);
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<number | null>(null);
   const dropdownTimeoutRef = useRef<number | null>(null);
   const [isSticky, setIsSticky] = useState(false);
   const handleScroll = () => {
+
     const offset = window.scrollY;
     if (offset > 100) {
       // Adjust this value based on when you want the header to become sticky
@@ -241,9 +244,9 @@ export default function Header() {
             )} */}
       </li>
       <li className="nav-item">
-        <a href="/contact" className="">
+        <Link href="/contact" className="">
           Contact Us
-        </a>
+        </Link>
       </li>
     </ul>
   );
@@ -251,21 +254,22 @@ export default function Header() {
   return (
     <>
       <div className="relative w-full">
-        <div className="flex bg-orange-100">
-          <div className="h-32 w-1/3 pb-4 pr-7 bg-orange-100 flex pt- justify-start">
+        <div className="md:flex md:bg-orange-100 ">
+          <div className="h-32 md:w-1/3 pb-4 pr-7 md:flex  justify-start ">
             <Image
               src={"/vedanta-logo.svg"}
               alt={""}
               width={500}
               height={500}
-              className="w-[75%] ml-20 mb-10 h-full bg-cover "
-            ></Image>
+              className="w-[75%] ml-20 mb-10 h-full   "
+            />
           </div>
 
-          <div
-            className="bg-gray-800 md:flex px-4 pt-6 justify-around w-full"
-            style={{ clipPath: "polygon(8% 0, 100% 0%, 100% 100%, 0% 100%)" }}
-          >
+         < div
+            className="bg-gray-800 md:flex px-4 pt-6 justify-around w-full md-clippath pb-10"
+            style={{
+              clipPath: isMediumScreen ? "polygon(8% 0, 100% 0%, 100% 100%, 0% 100%)" : 'none'
+            }}          >
             <div className="flex mt-2">
               <FaPhoneAlt size={20} className="text-white m-2" />
               <div>
@@ -338,7 +342,7 @@ export default function Header() {
         <Modal isOpen={isOpen} onClose={toggleMenu}>
           <div className="fixed inset-0 flex items-center justify-center z-50">
             <div
-              className="bg-white w-3/4 h-3/4 p-4 rounded-xl bg-gradient-to-r from-slate-900 via-green-950 to-slate-900"
+              className=" w-full h-full p-4  bg-gradient-to-r from-slate-900 via-green-950 to-slate-900"
               style={{
                 backgroundImage: "",
                 backgroundSize: "cover",

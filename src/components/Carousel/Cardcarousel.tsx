@@ -71,7 +71,7 @@ const Cardcarousel: React.FC = () => {
   ];
 
   return (
-    <section className="p-8">
+    <section className="p-8 ">
       <Slider {...settings} className="card-slider">
         {images.map((imageUrl, index) => (
           <div
