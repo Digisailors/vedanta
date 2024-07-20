@@ -241,9 +241,9 @@ export default function Header() {
             )} */}
       </li>
       <li className="nav-item">
-        <a href="/contact" className="">
+        <Link href="/contact" className="">
           Contact Us
-        </a>
+        </Link>
       </li>
     </ul>
   );

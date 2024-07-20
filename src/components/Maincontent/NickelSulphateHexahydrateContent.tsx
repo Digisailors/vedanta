@@ -37,7 +37,7 @@ export default function NickelSulphateHexahydrateContent() {
             various industrial applications, particularly in electroplating and
             battery production. Its vibrant emerald green crystals are highly
             soluble in water, making it an ideal source of nickel ions. The
-            compound's significance grew during the Industrial Revolution and
+            compound&apos;s significance grew during the Industrial Revolution and
             continues to play a vital role in modern manufacturing processes,
             especially with the increasing demand for rechargeable batteries in
             electric vehicles and portable electronics.
