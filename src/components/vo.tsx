@@ -193,7 +193,7 @@ export default function Component() {
                   height={500}
                   className="rounded-full w-auto h-96  object-cover"
                 />
-                <div className="absolute bottom-0 -right-24 w-64 h-64">
+                <div className="absolute bottom-0 left-0 md:-right-24 w-64 h-64">
                   <video
                     src={videos[0]}
                     className="rounded-full w-full h-full object-cover"
@@ -293,7 +293,7 @@ export default function Component() {
                   </svg>
                 </button>
               </div>
-              <div className=" rounded-b-lg">
+              <div className=" rounded-b-lg ">
                 <video
                   ref={videoRef}
                   className="w-full"
@@ -318,7 +318,7 @@ export default function Component() {
         <br />
         <br />
         <div >
-          <div className="flex justify-center w-full text-2xl px-4"><div className="flex px-4  ">
+          <div className="md:flex justify-center w-full text-2xl px-4"><div className="md:flex px-4  ">
             {titles.map((section, index) => (
               <TitleSection
                 key={index}
