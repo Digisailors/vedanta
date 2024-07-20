@@ -151,12 +151,30 @@ export default function Component() {
         '/images/img8.png'
       ]
     },
-    { title: 'Zinc, Lead & Silver', images: ['https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp', 'https://www.thestatesman.com/wp-content/uploads/2021/07/water-cannonnew.jpg', '/image7.jpg', 'https://s7ap1.scene7.com/is/image/TCSCOMprod/vedanta-automates-operations-from-pit-to-port?wid=1100&hei=581&dpr=off'] },
-    { title: 'Iron Ore', images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1eSFbZUSzDoP2Qo_PeWUVmwwA-TFJ16Q3VQ&s', '/image10.jpg', '/image11.jpg', '/image12.jpg'] },
-    { title: 'Oil & Gas', images: ['/image13.jpg', '/image14.jpg', '/image15.jpg', 'https://telugustop.com/wp-content/uploads/2022/02/vedanta-aluminium-fly-ash.jpg'] },
-    { title: 'Nickel', images: ['/image17.jpg', '/image18.jpg', '/image19.jpg', '/image20.jpg'] },
-    { title: 'Sulphate', images: ['/image21.jpg', 'https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp', '/image23.jpg', '/image24.jpg'] },
-    { title: 'Copper', images: ['/image25.jpg', '/image26.jpg', '/image27.jpg', 'https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp'] },
+    { title: 'Zinc, Lead & Silver', images: ['https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp', 'https://www.thestatesman.com/wp-content/uploads/2021/07/water-cannonnew.jpg',  '/images/img2.png',
+      '/images/img3.png',
+      '/images/img4.png',
+      '/images/img5.png', 'https://s7ap1.scene7.com/is/image/TCSCOMprod/vedanta-automates-operations-from-pit-to-port?wid=1100&hei=581&dpr=off'] },
+    { title: 'Iron Ore', images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1eSFbZUSzDoP2Qo_PeWUVmwwA-TFJ16Q3VQ&s', '/images/img2.png',
+      '/images/img3.png',
+      '/images/img4.png',
+      '/images/img5.png',] },
+    { title: 'Oil & Gas', images: [ '/images/img2.png',
+      '/images/img3.png',
+      '/images/img4.png',
+       'https://telugustop.com/wp-content/uploads/2022/02/vedanta-aluminium-fly-ash.jpg'] },
+    { title: 'Nickel', images: [ '/images/img2.png',
+      '/images/img3.png',
+      '/images/img4.png',
+      '/images/img5.png',] },
+    { title: 'Sulphate', images: [ 'https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp', '/images/img2.png',
+      '/images/img3.png',
+      '/images/img4.png',
+      '/images/img5.png',] },
+    { title: 'Copper', images: [ '/images/img2.png',
+      '/images/img3.png',
+      '/images/img4.png',
+       'https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp'] },
   ];
   const selectedImages = titles[selectedTitle].images;
 
@@ -223,10 +241,10 @@ export default function Component() {
           </div>
           <div className="mt-16 relative">
             <section className="bg-white py-16 text-black">
-              <div className="container mx-auto px-4 max-w-7xl">
+              <div className="container mx-auto px-4">
                 <Slider ref={sliderRef} {...settings}>
                   {features.map((feature, index) => (
-                    <div key={index} className="px-2">
+                    <div key={index} className="px-2 flex justify-center">
                       <div className="relative w-48 h-48 overflow-hidden border border-black rounded-xl transition duration-300 hover:shadow-xl group">
                         <div className="absolute inset-0 bg-[#0063A8] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                         <div className="relative z-10 h-full flex flex-col justify-center items-center p-8 text-center">
@@ -260,9 +278,11 @@ export default function Component() {
                 </Slider>
               </div>
             </section>
-            <div className="absolute top-1/2 transform -translate-y-1/2 left-0 right-0 flex justify-between -4">
+            <div className="flex justify-center">
+            <div className=" transform -translate-y-1/2 absolute top-1/2  flex justify-between -4 w-full">
               <Button onClick={prevSlide} className="bg-gray-200 text-gray-800 hover:bg-gray-300">&lt;</Button>
-              <Button onClick={nextSlide} className="bg-gray-200 text-gray-800 mr-9 hover:bg-gray-300">&gt;</Button>
+              <Button onClick={nextSlide} className="bg-gray-200 text-gray-800 md:mr-7  hover:bg-gray-300">&gt;</Button>
+            </div>
             </div>
           </div>
         </main>
