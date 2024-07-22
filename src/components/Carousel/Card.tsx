@@ -79,7 +79,6 @@ const Card: React.FC = () => {
       title: "Our Destiny",
       description: "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae. "
     },
-    // Add more items to test with a larger number of cards
     {
       title: "Our Vision",
       description: "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae."
@@ -105,8 +104,8 @@ const Card: React.FC = () => {
           <Slider {...settings}>
             {features.map((feature, index) => (
               <div key={index} className="px-2">
-                <div className="relative w-full h-64 overflow-hidden border transition duration-300 hover:shadow-xl group">
-                  <div className="absolute inset-0 bg-[#75bef2] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                <div className="relative w-full h-64 overflow-hidden border transition duration-300 hover:shadow-xl group flex items-center justify-center">
+                  <div className="absolute inset-0 bg-[#75bef2] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <div className="relative z-10 h-full flex flex-col justify-center items-center p-8 text-center">
                     <div className="text-4xl text-blue-600 mb-4 group-hover:text-[#66CC33] transition-colors duration-300">
                       {/* Add an icon or other element here if needed */}
@@ -117,6 +116,7 @@ const Card: React.FC = () => {
                     <p className="text-white group-hover:text-white transition-colors duration-300">
                       {feature.description}
                     </p>
+                  </div>
                   </div>
                 </div>
               </div>

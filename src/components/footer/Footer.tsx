@@ -2,7 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import { IoCall } from "react-icons/io5";
 import { MdMarkEmailUnread } from "react-icons/md";
-const Footer = () => {
+
+const Footer: React.FC = () => {
   return (
     <div>
       <div className="bg-black border border-b-4 border-green-600 text-white py-14">
@@ -13,14 +14,14 @@ const Footer = () => {
           </div>
           <div className="flex items-center space-x-8">
             <div className="flex items-center space-x-2">
-            <IoCall className='text-green-500' />
+              <IoCall className='text-green-500' />
               <div>
                 <p className="font-bold">Call us on</p>
                 <p>222-121-4562</p>
               </div>
             </div>
             <div className="flex items-center space-x-2">
-            <MdMarkEmailUnread className='text-green-500' />
+              <MdMarkEmailUnread className='text-green-500' />
               <div>
                 <p className="font-bold">Email us</p>
                 <p>support@gmail.com</p>
