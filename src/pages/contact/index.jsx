@@ -1,422 +1,276 @@
-import Footer from "@/components/footer/Footer";
-import Navbar from "@/components/Navbar/Navbar";
-import Image from "next/image";
-import React, { useState } from "react";
-import ourStory from "../../../src/assets/4-power-plant-aspect-ratio-400-409.jpg";
-import companyHistory from "../../../src/assets/transforming-for-good-slider_img3.jpg";
-import { GoShieldCheck } from "react-icons/go";
-import { RiLightbulbFlashLine } from "react-icons/ri";
-import { BsPersonWorkspace } from "react-icons/bs";
-import Link from "next/link";
-import Header from "@/components/Header/Header";
+"use client";
 
-const contact = () => {
-  const [selectedYear, setSelectedYear] = useState(2010);
-  const [activeSection, setActiveSection] = useState(0);
+import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
+import React from "react";
 
-  const nextSection = () => {
-    setActiveSection((prev) => (prev + 1) % 2);
-  };
+const containerStyle = {
+  width: "100%",
+  height: "100%",
+};
 
-  const prevSection = () => {
-    setActiveSection((prev) => (prev - 1 + 2) % 2);
-  };
+const center = {
+  lat: -3.745,
+  lng: -38.523,
+};
 
-  const sectors = [
-    [
-      { title: "Power & Energy Sector", icon: "/icons/power.svg" },
-      { title: "Petroleum Refinery", icon: "/icons/petroleum.svg" },
-      { title: "Mechanical Engineering", icon: "/icons/mechanical.svg" },
-    ],
-    [
-      { title: "Civil Engineering", icon: "/icons/civil.svg" },
-      { title: "Chemical Processing", icon: "/icons/chemical.svg" },
-      { title: "Industrial Automation", icon: "/icons/automation.svg" },
-    ],
-  ];
-  const years = [1970, 1980, 1990, 2000, 2010];
-  const [currentReview, setCurrentReview] = useState(0);
-
-  const nextReview = () => {
-    setCurrentReview((prev) => (prev + 1) % reviews.length);
-  };
-
-  const prevReview = () => {
-    setCurrentReview((prev) => (prev - 1 + reviews.length) % reviews.length);
-  };
-  const reviews = [
+const option = {
+  zoomControl: true,
+  disableDefaultUI: true,
+  styles: [
     {
-      title: "Best Consulting Firm",
-      content:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidu laboreetde magnam aliquam quaerat voluptatem.",
-      author: "Alexa Reid",
-      role: "Synopsis",
-      avatar: "/images/alexa-reid.jpg",
+      featureType: "all",
+      elementType: "geometry.fill",
+      stylers: [
+        {
+          weight: "2.00",
+        },
+      ],
     },
     {
-      title: "Nice People",
-      content:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidu laboreetde magnam aliquam quaerat voluptatem.",
-      author: "Alva Goldhammer",
-      role: "Synopsis",
-      avatar: "/images/alva-goldhammer.jpg",
+      featureType: "all",
+      elementType: "geometry.stroke",
+      stylers: [
+        {
+          color: "#9c9c9c",
+        },
+      ],
     },
-    // Add more reviews as needed
-  ];
+    {
+      featureType: "all",
+      elementType: "labels.text",
+      stylers: [
+        {
+          visibility: "on",
+        },
+      ],
+    },
+    {
+      featureType: "landscape",
+      elementType: "all",
+      stylers: [
+        {
+          color: "#f2f2f2",
+        },
+      ],
+    },
+    {
+      featureType: "landscape",
+      elementType: "geometry.fill",
+      stylers: [
+        {
+          color: "#ffffff",
+        },
+      ],
+    },
+    {
+      featureType: "landscape.man_made",
+      elementType: "geometry.fill",
+      stylers: [
+        {
+          color: "#ffffff",
+        },
+      ],
+    },
+    {
+      featureType: "poi",
+      elementType: "all",
+      stylers: [
+        {
+          visibility: "off",
+        },
+      ],
+    },
+    {
+      featureType: "road",
+      elementType: "all",
+      stylers: [
+        {
+          saturation: -100,
+        },
+        {
+          lightness: 45,
+        },
+      ],
+    },
+    {
+      featureType: "road",
+      elementType: "geometry.fill",
+      stylers: [
+        {
+          color: "#eeeeee",
+        },
+      ],
+    },
+    {
+      featureType: "road",
+      elementType: "labels.text.fill",
+      stylers: [
+        {
+          color: "#7b7b7b",
+        },
+      ],
+    },
+    {
+      featureType: "road",
+      elementType: "labels.text.stroke",
+      stylers: [
+        {
+          color: "#ffffff",
+        },
+      ],
+    },
+    {
+      featureType: "road.highway",
+      elementType: "all",
+      stylers: [
+        {
+          visibility: "simplified",
+        },
+      ],
+    },
+    {
+      featureType: "road.arterial",
+      elementType: "labels.icon",
+      stylers: [
+        {
+          visibility: "off",
+        },
+      ],
+    },
+    {
+      featureType: "transit",
+      elementType: "all",
+      stylers: [
+        {
+          visibility: "off",
+        },
+      ],
+    },
+    {
+      featureType: "water",
+      elementType: "all",
+      stylers: [
+        {
+          color: "#46bcec",
+        },
+        {
+          visibility: "on",
+        },
+      ],
+    },
+    {
+      featureType: "water",
+      elementType: "geometry.fill",
+      stylers: [
+        {
+          color: "#c8d7d4",
+        },
+      ],
+    },
+    {
+      featureType: "water",
+      elementType: "labels.text.fill",
+      stylers: [
+        {
+          color: "#070707",
+        },
+      ],
+    },
+    {
+      featureType: "water",
+      elementType: "labels.text.stroke",
+      stylers: [
+        {
+          color: "#ffffff",
+        },
+      ],
+    },
+  ],
+  scrollwheel: true,
+};
+
+function MyComponent() {
+  const { isLoaded } = useJsApiLoader({
+    id: "google-map-script",
+    googleMapsApiKey: "AIzaSyAAz77U5XQuEME6TpftaMdX0bBelQxXRlM",
+  });
+
+  const [map, setMap] = React.useState(null);
+
+  const onLoad = React.useCallback(function callback(map) {
+    // This is just an example of getting and using the map instance!!! don't just blindly copy!
+    const bounds = new window.google.maps.LatLngBounds(center);
+    map.fitBounds(bounds);
+
+    setMap(map);
+  }, []);
+
+  const onUnmount = React.useCallback(function callback(map) {
+    setMap(null);
+  }, []);
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header/>
-      <main className="flex-grow">
-        <div className="bg-white">
-          {/* Inner Banner */}
-          <div
-  className="py-16"
-  style={{
-    backgroundImage: "url('/images/img0.png')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-  <div className="container mx-auto px-4 text-center">
-    <h3 className="text-4xl font-bold mb-4">Contact Us</h3>
-    <ul className="flex justify-center">
-      <li>
-        <Link href="/" className="text-[#0063A8]">
-          Home
-        </Link>
-      </li>
-      <li>
-        <span className="mx-2">&gt;</span>
-      </li>
-      <li>
-        <span>Contact Us</span>
-      </li>
-    </ul>
-  </div>
-</div>
+    <div className="map relative mt-header ml-60 mr-60 md:ml-0 md:mr-0">
+      {isLoaded ? (
+        <GoogleMap
+          mapContainerStyle={containerStyle}
+          center={center}
+          zoom={12}
+          options={option}
+        >
+          {/* Child components, such as markers, info windows, etc. */}
+          <></>
+        </GoogleMap>
+      ) : (
+        <></>
+      )}
 
-
-          {/* About Style Three */}
-          <section className="py-16">
-            <div className="container mx-auto px-4 max-w-7xl">
-              <div className="flex flex-wrap">
-                <div className="w-full md:w-1/2 mb-8 md:mb-0">
-                  <div className="relative">
-                    <Image
-                      src={ourStory}
-                      alt="About Us"
-                      width={600}
-                      // height={300}
-                      className="h-[500px]"
-                    />
-                    <div className="absolute  top-6 left-0 bg-[#0063A8] h-64 w-64 text-white p-12">
-                      <span className="block text-md mt-2">Our Story</span>
-                      <h3 className="text-4xl font-bold">Something About</h3>
-                      <h3 className="text-4xl font-bold">Us</h3>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full md:w-1/2 flex justify-center items-center">
-                  <div className="pl-0 md:pl-8">
-                    <h3 className="text-4xl font-bold mb-4 text-black">
-                    Building Blocks for a Sustainable Future
-                    </h3>
-                    <p className="mb-12 text-black">
-                    Vedanta is a leading global natural resources and technology conglomerate operating across India, South Africa, Liberia, and Namibia. Our diversified interests span Oil & Gas, Zinc-Lead-Silver, Aluminium, Iron Ore, Steel, Copper, Ferro Alloys, Power, Nickel, Semiconductor, and Glass. Over the years, Vedanta has positioned itself as a leader in the natural resources sector, focusing on large-scale expansion with operational excellence benchmarked to global standards.
-
-For two decades, we have contributed to the Indian economy by generating thousands of jobs and significantly contributing to the national exchequer. We are committed to reducing carbon emissions to zero by 2050 or sooner, with a pledge of $5 billion over the next 10 years to accelerate this transition.
-
-Vedanta Limited is listed on the Bombay Stock Exchange and the National Stock Exchange.
-                    </p>
-                    <a
-                      href="#"
-                      className="bg-[#0063A8] text-white px-6 py-3 hover:bg-[#66CC33] transition duration-300"
-                    >
-                      Read More
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Features Style Two */}
-          <section className="bg-white py-16 text-black">
-            <div className="container mx-auto px-4 max-w-7xl">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {/* Feature Item 1 */}
-                <div className="relative w-96 h-80 overflow-hidden border transition duration-300 hover:shadow-xl group">
-                  <div className="absolute inset-0 bg-[#0063A8] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                  <div className="relative z-10 h-full flex flex-col justify-center items-center p-8 text-center">
-                    <div className="text-4xl text-blue-600 mb-4 group-hover:text-[#66CC33] transition-colors duration-300">
-                      <RiLightbulbFlashLine />
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 group-hover:text-[#66CC33] transition-colors duration-300">
-                      Who We Are
-                    </h3>
-                    <p className="group-hover:text-[#66CC33] transition-colors duration-300">
-                      Aenean lacinia feugiat massa, sit amet con sequat lacus
-                      suscipit vitae. Nunc vitae velit arcu aliquam
-                    </p>
-                  </div>
-                </div>
-
-                {/* Feature Item 2 */}
-                <div className="relative w-96 h-80 overflow-hidden border transition duration-300 hover:shadow-xl group">
-                  <div className="absolute inset-0 bg-[#0063A8] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                  <div className="relative z-10 h-full flex flex-col justify-center items-center p-8 text-center">
-                    <div className="text-4xl text-blue-600 mb-4 group-hover:text-[#66CC33] transition-colors duration-300">
-                      <GoShieldCheck />
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 group-hover:text-[#66CC33] transition-colors duration-300">
-                      Our Security
-                    </h3>
-                    <p className="group-hover:text-[#66CC33] transition-colors duration-300">
-                      Aenean lacinia feugiat massa, sit amet con sequat lacus
-                      suscipit vitae. Nunc vitae velit arcu aliquam
-                    </p>
-                  </div>
-                </div>
-
-                {/* Feature Item 3 */}
-                <div className="relative w-96 h-80 overflow-hidden border transition duration-300 hover:shadow-xl group">
-                  <div className="absolute inset-0 bg-[#0063A8] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                  <div className="relative z-10 h-full flex flex-col justify-center items-center p-8 text-center">
-                    <div className="text-4xl text-blue-600 mb-4 group-hover:text-[#66CC33] transition-colors duration-300">
-                      <BsPersonWorkspace />
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 group-hover:text-[#66CC33] transition-colors duration-300">
-                      Our Process
-                    </h3>
-                    <p className="group-hover:text-[#66CC33] transition-colors duration-300">
-                      Aenean lacinia feugiat massa, sit amet con sequat lacus
-                      suscipit vitae. Nunc vitae velit arcu aliquam
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          {/* Company History */}
-          <section className="py-16 bg-gray-100 text-black">
-            <div className="container mx-auto px-4 max-w-7xl">
-              <div className="grid md:grid-cols-2 gap-8 mb-12">
-                <div>
-                  <h2 className="text-4xl font-bold mb-4">
-                    Company <span className="text-[#0063A8]">history</span> at a
-                    glance
-                  </h2>
-                </div>
-                <div>
-                  <p className="text-gray-600">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  </p>
-                </div>
-              </div>
-
-              <div className="mb-12">
-                <div className="relative pt-8">
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200"></div>
-                  <div className="flex justify-between items-end relative">
-                    {years.map((year, index) => (
-                      <div
-                        key={year}
-                        className={`flex flex-col items-center ${
-                          index === 0
-                            ? "ml-[-8px]"
-                            : index === years.length - 1
-                            ? "mr-[-8px]"
-                            : ""
-                        }`}
-                      >
-                        <span
-                          className={`text-sm mb-4 ${
-                            selectedYear === year
-                              ? "text-[#0063A8] font-bold"
-                              : "text-gray-500"
-                          } transition-colors duration-200`}
-                        >
-                          {year}
-                        </span>
-                        <button
-                          onClick={() => setSelectedYear(year)}
-                          className={`w-2 h-2 rounded-full ${
-                            selectedYear === year
-                              ? "bg-[#0063A8]"
-                              : "bg-gray-400"
-                          } mb-[-2px] transition-colors duration-200 z-10`}
-                        ></button>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div className="relative h-80 w-full">
-                  <Image
-                    src={companyHistory}
-                    alt="Signing contract with major investor"
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-lg"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-3xl font-bold mb-4">
-                    Signing contract with major investor
-                  </h3>
-                  <p className="text-gray-600">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea com consequat. Duis
-                    aute irure dolor in reprehenderit in voluptate velit
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-          {/* Why Choose Us */}
-          <section className="py-16 bg-white">
-            <div className="container mx-auto px-4 max-w-7xl">
-              <div className="grid md:grid-cols-2 gap-8 mb-12">
-                <div>
-                  <h2 className="text-4xl font-bold mb-4 text-black">
-                    Why choose <span className="text-[#0063A8]">Vedanta</span>{" "}
-                    for your business
-                  </h2>
-                </div>
-                <div>
-                  <p className="text-gray-600">
-                    Totam rem aperiam, eaque ipsa quae ab illo inventore
-                    veritatis et quasi architecto beatae vitae dicta sunt
-                    explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                    aspernatur aut odit aut fugit, sed quia consequuntur magni
-                    dolores eos qui ratione vol.
-                  </p>
-                </div>
-              </div>
-
-              <div className="relative">
-                <div className="overflow-hidden">
-                  <div
-                    className="flex transition-transform duration-300 ease-in-out"
-                    style={{
-                      transform: `translateX(-${activeSection * 100}%)`,
-                    }}
-                  >
-                    {sectors.map((section, sectionIndex) => (
-                      <div key={sectionIndex} className="flex-shrink-0 w-full">
-                        <div className="grid md:grid-cols-3">
-                          {section.map((sector, index) => (
-                            <div
-                              key={index}
-                              className="bg-gray-100 border p-8 text-start"
-                            >
-                              <Image
-                                src={sector.icon}
-                                alt={sector.title}
-                                width={64}
-                                height={64}
-                                className="mx-auto mb-4"
-                              />
-                              <h3 className="text-xl font-bold mb-4">
-                                {sector.title}
-                              </h3>
-                              <button className="bg-[#0063A8] text-white px-6 py-2  hover:bg-[#66CC33] transition-colors">
-                                Read More
-                              </button>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex justify-center mt-8">
-                <button
-                  className={`h-3 w-3 rounded-full mx-1 ${
-                    activeSection === 0 ? "bg-[#0063A8]" : "bg-gray-300"
-                  }`}
-                  onClick={() => setActiveSection(0)}
-                />
-                <button
-                  className={`h-3 w-3 rounded-full mx-1 ${
-                    activeSection === 1 ? "bg-[#0063A8]" : "bg-gray-300"
-                  }`}
-                  onClick={() => setActiveSection(1)}
-                />
-              </div>
-            </div>
-          </section>
-          <section className="py-16 bg-white">
-            <div className="container mx-auto px-4 max-w-7xl">
-              <h2 className="text-4xl font-bold text-center mb-4 text-black">
-                Review from <span className="text-[#0063A8]">our clients</span>
-              </h2>
-              <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eius mod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-
-              <div className="relative max-w-4xl mx-auto">
-                <button
-                  onClick={prevReview}
-                  className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-200 rounded-full p-2"
-                >
-                  &lt;
-                </button>
-                <button
-                  onClick={nextReview}
-                  className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-200 rounded-full p-2"
-                >
-                  &gt;
-                </button>
-
-                <div className="bg-gray-100 p-8 rounded-lg">
-                  <div className="text-4xl text-gray-300 absolute top-4 right-4">
-                    
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">
-                    {reviews[currentReview].title}
-                  </h3>
-                  <p className="text-gray-600 mb-6">
-                    {reviews[currentReview].content}
-                  </p>
-                  <div className="flex items-center">
-                    <Image
-                      src={reviews[currentReview].avatar}
-                      alt={reviews[currentReview].author}
-                      width={60}
-                      height={60}
-                      className="rounded-full mr-4"
-                    />
-                    <div>
-                      <p className="font-bold">
-                        {reviews[currentReview].author}
-                      </p>
-                      <p className="text-gray-600">
-                        {reviews[currentReview].role}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          {/* Add more sections as needed */}
-        </div>
-      </main>
-      <div>
-        <Footer />
+      <div className="map__shape">
+        <svg
+          width="1800"
+          height="40"
+          viewBox="0 0 1800 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 25.747C0 25.747 46.3491 19.4287 88.8889 18.9879C132.063 18.5471 168.889 18.9879 221.587 21.1919C293.333 24.1307 431.746 36.0327 505.397 29.5674C579.048 23.1021 582.222 22.8083 619.683 18.694C661.587 13.992 746.667 4.58795 852.063 5.02877C964.444 5.46958 1168.25 29.4205 1252.06 28.245C1260.95 28.098 1293.97 27.0695 1318.73 25.3062C1342.86 23.5429 1378.41 19.7226 1426.67 18.4001C1446.98 17.8124 1479.37 16.7838 1516.83 17.0777C1526.35 17.2246 1556.83 17.6654 1593.02 19.4287C1629.21 21.1919 1662.86 23.9838 1693.33 24.8654C1758.73 26.4817 1800 24.1307 1800 24.1307V40H0V25.747ZM144.127 23.396C148.572 24.8654 156.825 23.9838 171.429 23.9838C186.032 23.9838 210.159 25.747 208.254 25.6001C206.349 25.4531 188.571 23.396 170.159 22.8083C151.111 22.0736 140.318 21.9266 144.127 23.396ZM260.952 27.3633C260.952 27.3633 276.19 27.6572 296.508 28.6858C316.825 29.8613 361.905 32.8 392.381 33.8286C444.444 35.4449 492.698 33.8286 488.254 33.6817C483.175 33.5347 427.302 34.5633 376.508 32.0653C355.556 31.0368 317.46 28.8327 297.778 28.098C276.825 27.2164 260.952 27.3633 260.952 27.3633ZM624.127 27.5103C613.333 28.5388 708.571 20.6042 741.587 18.5471C754.921 17.6654 780.952 16.196 805.079 15.6083C829.841 15.0205 861.587 15.0205 860.952 14.8736C860.952 14.5797 824.127 13.6981 789.841 14.8736C755.556 16.0491 756.825 16.4899 741.587 17.2246C717.46 18.4001 634.921 26.4817 624.127 27.5103ZM535.873 29.8613C534.603 29.8613 540.952 30.449 566.349 28.245C591.746 26.0409 608.889 23.1021 610.159 22.8083C611.429 22.6613 587.937 25.4531 568.254 27.2164C549.206 28.9797 536.508 29.8613 535.873 29.8613ZM3.17456 31.1837C3.80945 31.0368 15.238 29.5674 33.6506 27.5103C52.0634 25.4531 77.4603 23.396 76.1904 23.5429C74.9207 23.5429 53.9683 24.4246 29.2064 27.2164C4.44446 30.0082 2.53967 31.3307 3.17456 31.1837ZM1601.27 22.9552C1600.63 23.2491 1613.33 23.2491 1629.84 24.7185C1646.35 26.1878 1664.13 27.0695 1679.37 27.6572C1704.76 28.8327 1753.65 27.5103 1751.11 27.3633C1749.21 27.2164 1699.05 27.8041 1671.75 26.3348C1657.78 25.6001 1656.51 25.6001 1635.56 23.9838C1614.6 22.3674 1601.9 22.5144 1601.27 22.9552ZM1336.51 26.4817C1333.97 26.6286 1314.29 28.8327 1283.17 30.3021C1252.06 31.9184 1226.67 31.0368 1226.67 31.4776C1226.67 31.9184 1233.02 32.8 1266.03 31.9184C1299.05 31.0368 1339.05 26.3348 1336.51 26.4817ZM1345.4 30.1552C1344.13 30.0082 1323.81 32.0653 1309.21 32.6531C1294.6 33.0939 1297.14 33.3878 1297.14 33.5347C1297.14 33.6817 1304.13 33.8286 1314.29 33.2409C1325.08 32.5062 1346.67 30.3021 1345.4 30.1552ZM1205.71 33.5347C1205.08 33.2409 1183.49 32.3592 1170.16 30.8898C1156.83 29.4205 1158.73 30.0082 1158.1 30.1552C1157.46 30.3021 1163.17 31.3307 1173.33 32.0653C1183.49 32.947 1206.35 33.8286 1205.71 33.5347ZM1384.76 23.6899C1385.4 23.2491 1382.86 22.9552 1372.7 23.9838C1362.54 25.0123 1356.19 25.894 1358.73 25.747C1361.27 25.6001 1364.44 25.1593 1374.6 24.5715C1385.4 23.9838 1384.13 24.1307 1384.76 23.6899ZM1580.95 21.7797C1582.22 21.7797 1567.62 20.6042 1560 20.4573C1552.38 20.3103 1547.3 20.3103 1547.3 20.7511C1547.3 21.1919 1547.94 21.4858 1557.46 21.3389C1567.62 21.1919 1579.68 21.7797 1580.95 21.7797ZM833.651 8.99609C834.286 8.84915 848.889 9.4369 881.27 9.4369C913.016 9.4369 967.619 12.9634 990.476 14.5797C1013.33 16.1961 926.984 8.84915 885.714 8.55527C844.444 8.2614 833.016 9.14303 833.651 8.99609Z"
+            fill="white"
+          />
+          <path
+            d="M88.2537 13.5511C88.8886 13.6981 117.46 13.1103 133.968 13.5511C180.317 14.5797 241.905 18.2532 239.365 17.8123C236.825 17.3715 152.381 13.2573 131.428 12.9634C100.317 12.3756 87.6188 13.5511 88.2537 13.5511Z"
+            fill="white"
+          />
+          <path
+            d="M356.19 25.6001C357.46 25.747 384.762 27.0694 416.508 27.3633C448.254 27.6572 497.143 26.4817 494.603 26.6286C492.698 26.7756 457.143 29.2735 410.159 28.3919C363.175 27.5103 354.921 25.4531 356.19 25.6001Z"
+            fill="white"
+          />
+          <path
+            d="M501.587 20.3103C502.222 20.4573 488.889 21.7797 481.27 21.9266C473.651 22.0736 468.571 21.9266 468.571 21.4858C468.571 21.045 469.206 20.7511 478.73 20.8981C489.524 21.045 500.952 20.1634 501.587 20.3103Z"
+            fill="white"
+          />
+          <path
+            d="M523.81 24.4246C523.81 24.5715 551.746 22.6613 563.81 21.1919C575.873 19.8695 603.175 16.6369 602.54 16.6369C601.905 16.4899 575.873 18.9879 562.54 20.4572C549.206 21.9266 523.81 24.2776 523.81 24.4246Z"
+            fill="white"
+          />
+          <path
+            d="M819.048 0.767567C819.683 0.914505 848.254 0.326754 864.762 0.767567C911.111 1.79613 972.698 5.46958 970.159 5.02877C967.619 4.58796 883.175 0.473692 862.222 0.179816C831.111 -0.407936 818.413 0.620629 819.048 0.767567Z"
+            fill="white"
+          />
+          <path
+            d="M1533.97 11.6409C1533.97 11.6409 1526.35 12.0818 1515.56 11.7879C1504.76 11.494 1478.73 10.4654 1463.49 10.7593C1436.83 11.3471 1416.51 14.7266 1419.05 14.5797C1421.59 14.5797 1446.35 11.3471 1473.65 11.7879C1485.08 11.9348 1506.03 12.5226 1516.19 12.3756C1526.35 12.2287 1533.97 11.6409 1533.97 11.6409Z"
+            fill="white"
+          />
+          <path
+            d="M1320.64 21.4857C1319.37 21.3388 1307.94 22.6612 1293.33 23.1021C1278.73 23.3959 1280 23.5429 1280 23.8367C1280 23.9837 1291.43 24.4245 1301.59 23.8367C1311.75 23.1021 1321.91 21.6327 1320.64 21.4857Z"
+            fill="white"
+          />
+          <path
+            d="M1700.95 20.6041C1700.95 20.751 1673.65 20.6041 1658.41 19.8694C1643.17 19.1347 1626.67 17.0776 1626.67 16.9306C1626.67 16.7837 1643.81 18.1061 1659.05 18.9878C1673.65 19.8694 1700.32 20.4571 1700.95 20.6041Z"
+            fill="white"
+          />
+        </svg>
       </div>
     </div>
   );
-};
-
-export default contact;
-
+}
+export default React.memo(MyComponent);

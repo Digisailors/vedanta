@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div>
       <div className="bg-black border border-b-4 border-green-600 text-white py-14">
-        <div className="container mx-auto px-8 flex justify-between items-center">
+        <div className="container mx-auto px-8 flex justify-between items-center ">
           <div>
             <h3 className="text-2xl font-bold">Get in <span className="text-blue-500">Touch</span></h3>
             <p>You will find yourself working in a true partnership that results in an incredible experience, and an end product that is the best.</p>

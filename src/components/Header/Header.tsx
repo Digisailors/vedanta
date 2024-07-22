@@ -241,9 +241,9 @@ export default function Header() {
             )} */}
       </li>
       <li className="nav-item">
-        <Link href="/contact" className="">
+        <a href="/contact" className="">
           Contact Us
-        </Link>
+        </a>
       </li>
     </ul>
   );
@@ -251,8 +251,8 @@ export default function Header() {
   return (
     <>
       <div className="relative w-full">
-        <div className="flex bg-orange-100">
-          <div className="h-32 w-1/3 pb-4 pr-7 bg-orange-100 flex pt- justify-start">
+        <div className="flex bg-white">
+          <div className="h-32 w-1/3 pb-4 pr-7 bg-white flex pt- justify-start">
             <Image
               src={"/vedanta-logo.svg"}
               alt={""}
@@ -263,13 +263,13 @@ export default function Header() {
           </div>
 
           <div
-            className="bg-gray-800 md:flex px-4 pt-6 justify-around w-full"
+            className="bg-gray-900 md:flex px-4 pt-6 justify-around w-full"
             style={{ clipPath: "polygon(8% 0, 100% 0%, 100% 100%, 0% 100%)" }}
           >
             <div className="flex mt-2">
               <FaPhoneAlt size={20} className="text-white m-2" />
               <div>
-                <p className="text-blue-500">Call us 9:00am - 6:00pm</p>
+                <p className="text-green-500">Call us 9:00am - 6:00pm</p>
                 <p className="text-white">222-111-2254</p>
               </div>
             </div>
