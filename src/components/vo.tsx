@@ -1,15 +1,13 @@
 import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { Button } from "@/components/ui/button";
 
-import { GiChemicalDrop } from 'react-icons/gi';
+import { GiChemicalDrop } from "react-icons/gi";
 import { BsFillFuelPumpFill } from "react-icons/bs";
 import TitleSection from "./Titlesection";
-
-
 
 // Replace with actual icons you need
 
@@ -18,10 +16,10 @@ export default function Component() {
   const videoRef = useRef(null);
   const sliderRef = useRef<any>(null);
   const images = [
-    'https://images.pexels.com/photos/3361235/pexels-photo-3361235.jpeg?auto=compress&cs=tinysrgb&w=800'
+    "https://images.pexels.com/photos/3361235/pexels-photo-3361235.jpeg?auto=compress&cs=tinysrgb&w=800",
   ];
   const videos = [
-    'https://videos.pexels.com/video-files/5099274/5099274-sd_640_360_30fps.mp4'
+    "https://videos.pexels.com/video-files/5099274/5099274-sd_640_360_30fps.mp4",
   ];
   const settings = {
     infinite: true,
@@ -34,95 +32,102 @@ export default function Component() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-        }
+        },
       },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-        }
+        },
       },
       {
         breakpoint: 1200,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
-        }
+        },
       },
       {
         breakpoint: 1600,
         settings: {
           slidesToShow: 5,
           slidesToScroll: 1,
-        }
+        },
       },
       {
         breakpoint: 2000,
         settings: {
           slidesToShow: 6,
           slidesToScroll: 1,
-        }
+        },
       },
       {
         breakpoint: 2400,
         settings: {
           slidesToShow: 7,
           slidesToScroll: 1,
-        }
+        },
       },
       {
         breakpoint: 2800,
         settings: {
           slidesToShow: 8,
           slidesToScroll: 1,
-        }
-      }
-    ]
+        },
+      },
+    ],
   };
   const features = [
     {
       icon: GiChemicalDrop,
       title: "Who We Are",
-      description: "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae. Nunc vitae velit arcu aliquam"
+      description:
+        "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae. Nunc vitae velit arcu aliquam",
     },
     {
       icon: BsFillFuelPumpFill,
       title: "Our Security",
-      description: "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae. Nunc vitae velit arcu aliquam"
+      description:
+        "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae. Nunc vitae velit arcu aliquam",
     },
     {
       icon: BsFillFuelPumpFill,
       title: "Our Process",
-      description: "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae. Nunc vitae velit arcu aliquam"
+      description:
+        "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae. Nunc vitae velit arcu aliquam",
     },
     {
       icon: BsFillFuelPumpFill,
       title: "Our Destiny",
-      description: "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae. Nunc vitae velit arcu aliquam"
+      description:
+        "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae. Nunc vitae velit arcu aliquam",
     },
     {
       icon: BsFillFuelPumpFill,
       title: "Our Vision",
-      description: "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae. Nunc vitae velit arcu aliquam"
+      description:
+        "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae. Nunc vitae velit arcu aliquam",
     },
     {
       icon: BsFillFuelPumpFill,
       title: "Our Mission",
-      description: "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae. Nunc vitae velit arcu aliquam"
+      description:
+        "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae. Nunc vitae velit arcu aliquam",
     },
     {
       icon: BsFillFuelPumpFill,
       title: "Our Values",
-      description: "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae. Nunc vitae velit arcu aliquam"
+      description:
+        "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae. Nunc vitae velit arcu aliquam",
     },
     {
       icon: BsFillFuelPumpFill,
       title: "Our Goals",
-      description: "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae. Nunc vitae velit arcu aliquam"
-    }
+      description:
+        "Aenean lacinia feugiat massa, sit amet con sequat lacus suscipit vitae. Nunc vitae velit arcu aliquam",
+    },
   ];
-
 
   const prevSlide = () => {
     if (sliderRef.current) {
@@ -139,58 +144,97 @@ export default function Component() {
 
   const titles = [
     {
-      title: 'Aluminium', 
+      title: "Aluminium",
       images: [
-        '/images/img1.png',
-        '/images/img2.png',
-        '/images/img3.png',
-        '/images/img4.png',
-        '/images/img5.png',
-        '/images/img6.png',
-        '/images/img7.png',
-        '/images/img8.png'
-      ]
+        "/images/img1.png",
+        "/images/img2.png",
+        "/images/img3.png",
+        "/images/img4.png",
+        "/images/img5.png",
+        "/images/img6.png",
+        "/images/img7.png",
+        "/images/img8.png",
+      ],
     },
-    { title: 'Zinc, Lead & Silver', images: ['https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp', 'https://www.thestatesman.com/wp-content/uploads/2021/07/water-cannonnew.jpg',  '/images/img2.png',
-      '/images/img3.png',
-      '/images/img4.png',
-      '/images/img5.png', 'https://s7ap1.scene7.com/is/image/TCSCOMprod/vedanta-automates-operations-from-pit-to-port?wid=1100&hei=581&dpr=off'] },
-    { title: 'Iron Ore', images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1eSFbZUSzDoP2Qo_PeWUVmwwA-TFJ16Q3VQ&s', '/images/img2.png',
-      '/images/img3.png',
-      '/images/img4.png',
-      '/images/img5.png',] },
-    { title: 'Oil & Gas', images: [ '/images/img2.png',
-      '/images/img3.png',
-      '/images/img4.png',
-       'https://telugustop.com/wp-content/uploads/2022/02/vedanta-aluminium-fly-ash.jpg'] },
-    { title: 'Nickel', images: [ '/images/img2.png',
-      '/images/img3.png',
-      '/images/img4.png',
-      '/images/img5.png',] },
-    { title: 'Sulphate', images: [ 'https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp', '/images/img2.png',
-      '/images/img3.png',
-      '/images/img4.png',
-      '/images/img5.png',] },
-    { title: 'Copper', images: [ '/images/img2.png',
-      '/images/img3.png',
-      '/images/img4.png',
-       'https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp'] },
+    {
+      title: "Zinc, Lead & Silver",
+      images: [
+        "https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp",
+        "https://www.thestatesman.com/wp-content/uploads/2021/07/water-cannonnew.jpg",
+        "/images/img2.png",
+        "/images/img3.png",
+        "/images/img4.png",
+        "/images/img5.png",
+        "https://s7ap1.scene7.com/is/image/TCSCOMprod/vedanta-automates-operations-from-pit-to-port?wid=1100&hei=581&dpr=off",
+      ],
+    },
+    {
+      title: "Iron Ore",
+      images: [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1eSFbZUSzDoP2Qo_PeWUVmwwA-TFJ16Q3VQ&s",
+        "/images/img2.png",
+        "/images/img3.png",
+        "/images/img4.png",
+        "/images/img5.png",
+      ],
+    },
+    {
+      title: "Oil & Gas",
+      images: [
+        "/images/img2.png",
+        "/images/img3.png",
+        "/images/img4.png",
+        "https://telugustop.com/wp-content/uploads/2022/02/vedanta-aluminium-fly-ash.jpg",
+      ],
+    },
+    {
+      title: "Nickel",
+      images: [
+        "/images/img2.png",
+        "/images/img3.png",
+        "/images/img4.png",
+        "/images/img5.png",
+      ],
+    },
+    {
+      title: "Sulphate",
+      images: [
+        "https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp",
+        "/images/img2.png",
+        "/images/img3.png",
+        "/images/img4.png",
+        "/images/img5.png",
+      ],
+    },
+    {
+      title: "Copper",
+      images: [
+        "/images/img2.png",
+        "/images/img3.png",
+        "/images/img4.png",
+        "https://www.vedantalimited.com/vedantaFY23/images/mbl/vedanta-at-a-glance.webp",
+      ],
+    },
   ];
   const selectedImages = titles[selectedTitle].images;
 
   return (
     <>
-      <div className="min-h-screen bg-white mt-28">
+      <div className="min-h-screen bg-white mt-64">
         <main className="px-4 py-16 text-center md:px-8 lg:px-16">
           <div className="md:flex w-full">
-            <div className="text-left w-[60%]">
+            <div className="text-left md:w-[60%]">
               <h1 className="text-4xl font-bold">
-                Welcome to <span className="text-[#74b42c]">Industrio Company</span>
+                Welcome to{" "}
+                <span className="text-[#74b42c]">Industrio Company</span>
               </h1>
               <p className="mt-4 text-lg text-gray-700">
-                Manufacturing industry became a key sector of production and labour in European and North American countries during the Industrial Revolution, upsetting previous mercantile and feudal economies.
+                Manufacturing industry became a key sector of production and
+                labour in European and North American countries during the
+                Industrial Revolution, upsetting previous mercantile and feudal
+                economies.
               </p>
-              <div className="mt-4 space-y-2 text-left md:space-y-0 md:space-x-8 md:flex md:justify-start">
+              <div className="mt-4  text-left md:space-y-0 md:space-x-8 gap-3 flex items-center justify-start">
                 <div>
                   <p className="text-[#045494]">→ Our Work Growth</p>
                   <p className="text-[#045494]">→ 1500 Employed</p>
@@ -200,7 +244,9 @@ export default function Component() {
                   <p className="text-[#045494]">→ Service Management</p>
                 </div>
               </div>
-              <Button className="mt-8 bg-[#74b42c] text-white">Learn about the services</Button>
+              <Button className="mt-8 bg-[#74b42c] text-white">
+                Learn about the services
+              </Button>
             </div>
             <div className="mt-16 flex justify-center">
               <div className="relative  h-[25rem] w-[25rem] rounded-full ">
@@ -245,44 +291,59 @@ export default function Component() {
                 <Slider ref={sliderRef} {...settings}>
                   {features.map((feature, index) => (
                     <div key={index} className="px-2 flex justify-center">
-                      <div className="relative w-48 h-48 overflow-hidden border border-black rounded-xl transition duration-300 hover:shadow-xl group">
-                        <div className="absolute inset-0 bg-[#0063A8] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                        <div className="relative z-10 h-full flex flex-col justify-center items-center p-8 text-center">
-                          {/* Default content */}
-                          <div className="default-content group-hover:hidden">
-                            <div className="text-4xl text-blue-500 mb-4 transition-colors duration-300 flex justify-center">
-                              {React.createElement(feature.icon, { className: "h-10 w-10 flex justify-center" })}
+                      <div className=" flex justify-center">
+                        <div className="relative w-48 h-48 overflow-hidden border border-black rounded-xl transition duration-300 hover:shadow-xl group">
+                          <div className="absolute inset-0 bg-[#0063A8] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                          <div className="relative z-10 h-full flex flex-col justify-center items-center p-8 text-center">
+                            {/* Default content */}
+                            <div className="default-content group-hover:hidden">
+                              <div className="text-4xl text-blue-500 mb-4 transition-colors duration-300 flex justify-center">
+                                {React.createElement(feature.icon, {
+                                  className: "h-10 w-10 flex justify-center",
+                                })}
+                              </div>
+                              <h3 className="text-xl font-bold mb-4 transition-colors duration-300">
+                                {feature.title}
+                              </h3>
                             </div>
-                            <h3 className="text-xl font-bold mb-4 transition-colors duration-300">
-                              {feature.title}
-                            </h3>
-                          </div>
-                          {/* Hover content */}
-                          <div className="hover-content hidden group-hover:flex flex-col justify-center items-center">
-                            <div className="text-4xl text-[#66CC33] mb-4 transition-colors duration-300">
-                              {React.createElement(feature.icon, { className: "h-10 w-10 flex justify-center text-[#66CC33]" })}
+                            {/* Hover content */}
+                            <div className="hover-content hidden group-hover:flex flex-col justify-center items-center">
+                              <div className="text-4xl text-[#66CC33] mb-4 transition-colors duration-300">
+                                {React.createElement(feature.icon, {
+                                  className:
+                                    "h-10 w-10 flex justify-center text-[#66CC33]",
+                                })}
+                              </div>
+                              <h3 className="text-2xl font-bold mb-4 text-[#66CC33] transition-colors duration-300">
+                                {feature.title}
+                              </h3>
+                              <p className="transition-colors duration-300">
+                                {feature.description}
+                              </p>
                             </div>
-                            <h3 className="text-2xl font-bold mb-4 text-[#66CC33] transition-colors duration-300">
-                              {feature.title}
-                            </h3>
-                            <p className="transition-colors duration-300">
-                              {feature.description}
-                            </p>
                           </div>
                         </div>
                       </div>
                     </div>
                   ))}
-
-
                 </Slider>
               </div>
             </section>
             <div className="flex justify-center">
-            <div className=" transform -translate-y-1/2 absolute top-1/2  flex justify-between -4 w-full">
-              <Button onClick={prevSlide} className="bg-gray-200 text-gray-800 hover:bg-gray-300">&lt;</Button>
-              <Button onClick={nextSlide} className="bg-gray-200 text-gray-800 md:mr-7  hover:bg-gray-300">&gt;</Button>
-            </div>
+              <div className=" transform -translate-y-1/2 absolute top-1/2  flex justify-between -4 w-full">
+                <Button
+                  onClick={prevSlide}
+                  className="bg-gray-200 text-gray-800 hover:bg-gray-300"
+                >
+                  &lt;
+                </Button>
+                <Button
+                  onClick={nextSlide}
+                  className="bg-gray-200 text-gray-800 md:mr-7  hover:bg-gray-300"
+                >
+                  &gt;
+                </Button>
+              </div>
             </div>
           </div>
         </main>
@@ -314,12 +375,7 @@ export default function Component() {
                 </button>
               </div>
               <div className=" rounded-b-lg ">
-                <video
-                  ref={videoRef}
-                  className="w-full"
-                  autoPlay
-                  controls
-                >
+                <video ref={videoRef} className="w-full" autoPlay controls>
                   <source src={videos[0]} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
@@ -329,28 +385,38 @@ export default function Component() {
         )}
       </div>
       <div>
-        <h1 className="text-4xl text-center">Projects for <span className="text-[#74b42c]">inspirations</span></h1>
+        <h1 className="text-4xl text-center">
+          Projects for <span className="text-[#74b42c]">inspirations</span>
+        </h1>
         <div className="flex justify-center w-full my-5">
-          <h1 className="text-xl text-center w-2/4">You will find yourself working in a true partnership that results in an incredible
-            experience, and an end product that is the best.</h1>
+          <h1 className="text-xl text-center w-2/4">
+            You will find yourself working in a true partnership that results in
+            an incredible experience, and an end product that is the best.
+          </h1>
         </div>
 
         <br />
         <br />
-        <div >
-          <div className="md:flex justify-center w-full text-2xl px-4"><div className="md:flex px-4  ">
-            {titles.map((section, index) => (
-              <TitleSection
-                key={index}
-                title={section.title}
-                isSelected={selectedTitle === index}
-                onClick={() => setSelectedTitle(index)}
-              />
-            ))}</div></div>
+        <div>
+          <div className="md:flex justify-center w-full text-2xl px-4">
+            <div className="md:flex px-4  ">
+              {titles.map((section, index) => (
+                <TitleSection
+                  key={index}
+                  title={section.title}
+                  isSelected={selectedTitle === index}
+                  onClick={() => setSelectedTitle(index)}
+                />
+              ))}
+            </div>
+          </div>
           <div className="flex justify-center">
-          <div className="images w-[90%] grid grid-cols-4 gap-4 mt-10">
+            <div className="images w-[90%] grid grid-cols-4 gap-4 mt-10">
               {selectedImages.map((src, index) => (
-                <div key={index} className="image-container flex justify-center items-center">
+                <div
+                  key={index}
+                  className="image-container flex justify-center items-center"
+                >
                   <Image
                     width={300}
                     height={300}
@@ -364,20 +430,20 @@ export default function Component() {
             </div>
           </div>
           <style jsx>{`
-          .images {
-            gap: 10px;
-            margin-top: 20px;
-          }
-          .image-container {
-            aspect-ratio: 1 / 1;
-            overflow: hidden;
-          }
-          .title-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        `}</style>
+            .images {
+              gap: 10px;
+              margin-top: 20px;
+            }
+            .image-container {
+              aspect-ratio: 1 / 1;
+              overflow: hidden;
+            }
+            .title-image {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          `}</style>
         </div>
       </div>
     </>
