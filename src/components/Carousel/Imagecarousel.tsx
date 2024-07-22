@@ -128,7 +128,7 @@ export function ImagesSliderDemo() {
           <FaArrowRight className="text-black" />
         </motion.button>
       </div>
-      <div className="absolute md:bottom-64  w-full">
+      <div className="absolute md:-bottom-40  w-full">
         <Cardcarousel />
       </div>
     </>
